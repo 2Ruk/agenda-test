@@ -1,19 +1,16 @@
-const Agenda = require("agenda");
-const moment = require("moment");
+import {Agenda} from "agenda";
+import con from "./config/config.js";
+import {NateOn} from "./service/nate_on.js";
 const mongoConnectionString = "mongodb://127.0.0.1/agenda";
 const agenda = new Agenda({ db: { address: mongoConnectionString } });
 
 
 (async function () {
     await agenda.start();
-    await agenda.every("3 seconds", "3seconds test");
-    await agenda.every("5 seconds", "5seconds test");
+    await agenda.every("5 seconds", con.lunchMenu);
 })();
 
-agenda.define("3seconds test", async (job) => {
-    console.log('3초 '+new moment().format('yyyy-mm-dd-ss'))
-});
-
-agenda.define("5seconds test", async (job) => {
-    console.log('5초 '+new moment().format('yyyy-mm-ddd-ss'))
+agenda.define(con.lunchMenu, async (job) => {
+    const nate = new NateOn();
+    await nate.sendMenu('Menu')
 });

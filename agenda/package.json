@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "worker": "node ./worker/index.js"
+    "worker": "node --experimental-specifier-resolution=node ./worker/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "agenda": "^4.2.1",
-    "moment": "^2.29.2"
-  }
+    "axios": "^0.27.2",
+    "config": "^3.3.7",
+    "moment": "^2.29.2",
+    "qs": "^6.10.3"
+  },
+  "type": "module",
+  "target": "esnext",
+  "module": "commonjs"
 }
