@@ -18,7 +18,7 @@ export interface IWeatherMessage {
 interface IMessageValue {
   text: ITimeText,
   idx: number,
-  value: number,
+  value: number[],
 }
 
-type ITimeText = '오전'|'오후'
+type ITimeText = '출근시간'|'퇴근시간'
