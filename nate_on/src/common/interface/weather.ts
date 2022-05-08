@@ -8,3 +8,17 @@ export interface IWeatherApi {
   nx: string,
   ny: string
 }
+
+export interface IWeatherMessage {
+  today: string,
+  am:IMessageValue,
+  pm:IMessageValue
+}
+
+interface IMessageValue {
+  text: ITimeText,
+  idx: number,
+  value: number,
+}
+
+type ITimeText = '오전'|'오후'
