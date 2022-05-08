@@ -1,5 +1,11 @@
+export class ControllerNate {
 
+  constructor() {
+  }
 
-export namespace NATE {
+  private config(){
+
+  }
+
 
 }

@@ -1,5 +1,9 @@
+import {Service_weather} from "./service_weather";
 
+export class Controller_weather {
+  private readonly serviceWeather: Service_weather = new Service_weather();
 
-export namespace NATE {
-
+  getTodayWeather(){
+    return this.serviceWeather.getTodayWeather()
+  }
 }

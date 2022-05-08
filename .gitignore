@@ -1,3 +1,4 @@
 # 프로젝트 제외 경로
 /agenda/node_modules/
 /nate_on/node_modules/
+/nate_on/.env
