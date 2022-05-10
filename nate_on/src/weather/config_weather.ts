@@ -1,6 +1,6 @@
 import {nx, ny, serviceKey, weatherApi} from "../common/common_config";
 import {IWeatherApi} from "../common/interface/weather";
-import * as dayjs from "dayjs";
+import dayjs from "dayjs";
 
 export namespace Weather{
   export function getTodayUrl(url: string = weatherApi): string{

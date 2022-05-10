@@ -6,7 +6,8 @@ export interface IWeatherApi {
   base_date: string,
   base_time: string,
   nx: string,
-  ny: string
+  ny: string,
+  [key: string]: string
 }
 
 export interface IWeatherMessage {
